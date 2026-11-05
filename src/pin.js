@@ -1,14 +1,10 @@
 export function esPinValido(pin) {
 
-    if (pin === null || pin === undefined) {
+    if (pin == null || pin === "") {
         return false;
     }
 
-    if (pin === "") {
-        return false;
-    }
-
-    if (pin.length !== 4 && pin.length !== 6) {
+    if (![4, 6].includes(pin.length)) {
         return false;
     }
 
